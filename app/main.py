@@ -9,7 +9,8 @@ def get_weather() -> None:
         raise Exception("API_KEY not found in environment")
 
     CITY = "Paris"
-    URL = f"https://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={API_KEY}&units=metric"
+    URL = (f"https://api.openweathermap.org/data/2.5/weather?q="
+           f"{CITY}&appid={API_KEY}&units=metric")
 
     response = requests.get(URL)
 
